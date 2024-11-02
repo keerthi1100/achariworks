@@ -3,7 +3,11 @@ import PropTypes from 'prop-types';
 
 import './index.scss';
 
-const Header=({ name, icon })=> {
+type headerProps = { name?: string };
+
+
+const Header=(props: headerProps)=> {
+    const {name} = props;
     return (
         <div className='header-wrapper'>
             <span className='header-title'>{name}</span>
